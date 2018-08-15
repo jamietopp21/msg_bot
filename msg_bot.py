@@ -60,9 +60,9 @@ class ToppBot(Client):
 
 
                 elif re.match('!urmomgay', msg_text):                    
-                send_this.text = f'no u'
-                self.send(send_this, thread_id=thread_id, thread_type=thread_type)
-  
+                    send_this.text = f'no u'
+                    self.send(send_this, thread_id=thread_id, thread_type=thread_type)
+    
 
                 elif re.match('!cato', msg_text):
                     req = requests.get('http://thecatapi.com/api/images/get?format=xml').text
