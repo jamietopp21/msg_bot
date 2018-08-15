@@ -53,6 +53,34 @@ class ToppBot(Client):
                     send_this.text = f'I\'m working!'
                     self.send(send_this, thread_id=thread_id, thread_type=thread_type)
 
+                elif re.match('!choosefood'):
+                    foods = [
+                        'Nandos',
+                        'McDonalds',
+                        'Pizza Plus',
+                        'Subway',
+                        'VIP Pizza',
+                        'Spoons',
+                        'Taco Bell',
+                        'Burger King',
+                        'Grubbs',
+                        'Buddies',
+                        'Fillets',
+                        'Pizza Express',
+                        'Casa Brazil',
+                        'Coast to Coast',
+                        'Pizza Hut',
+                        'Meat Liquor',
+                        'GBK',
+                        'Home Food!',
+                        'Supermarket',
+                        'Starve'
+                    ]
+
+                    choice = rand_module.choice(foods)
+                    send_this.text = f'{choice}!'
+                    self.send(send_this, thread_id=thread_id, thread_type=thread_type)
+
 
 
                 elif re.match('!urmomgay', msg_text):                    
