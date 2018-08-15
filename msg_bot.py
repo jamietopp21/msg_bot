@@ -88,8 +88,9 @@ class ToppBot(Client):
                     self.send(send_this, thread_id=thread_id, thread_type=thread_type)
     
 
-                elif re.match('!under_plonk', msg_text):                    
-                    send_this.text = f'The Plonkmaster is currently Hayley Dillin'
+                elif re.match('!canigetayeet', msg_text):
+                    e = 'e'*random.randint(2,30)                   
+                    send_this.text = f'y{e}t'
                     self.send(send_this, thread_id=thread_id, thread_type=thread_type)
 
 
