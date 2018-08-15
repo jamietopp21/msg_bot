@@ -54,7 +54,9 @@ class ToppBot(Client):
                     self.sendRemoteImage(url, message=Message(text=''), thread_id=thread_id, thread_type=thread_type)
 
 
-
+                elif re.match('!checkserver', msg_text):
+                    send_this.text = f'I\'m working!'
+                    self.send(send_this, thread_id=thread_id, thread_type=thread_type)
 
 
                 # elif re.match('!wordgame',msg_text):
