@@ -59,6 +59,11 @@ class ToppBot(Client):
                     self.send(send_this, thread_id=thread_id, thread_type=thread_type)
 
 
+                elif re.match('!howmanybeansmake5', msg_text):
+                    send_this.text = f'2 beans, a bean and a half, half a bean and a bean'
+                    self.send(send_this, thread_id=thread_id, thread_type=thread_type)
+
+
                 elif re.match('!urmomgay', msg_text):                    
                     send_this.text = f'no u'
                     self.send(send_this, thread_id=thread_id, thread_type=thread_type)
