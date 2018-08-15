@@ -88,6 +88,11 @@ class ToppBot(Client):
                     self.send(send_this, thread_id=thread_id, thread_type=thread_type)
     
 
+                elif re.match('!under_plonk', msg_text):                    
+                    send_this.text = f'The Plonkmaster is currently Hayley Dillin'
+                    self.send(send_this, thread_id=thread_id, thread_type=thread_type)
+
+
                 elif re.match('!cato', msg_text):
                     req = requests.get('http://thecatapi.com/api/images/get?format=xml').text
                     
