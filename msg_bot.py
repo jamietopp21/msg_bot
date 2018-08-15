@@ -63,6 +63,12 @@ class ToppBot(Client):
                     send_this.text = f'2 beans, a bean and a half, half a bean and a bean'
                     self.send(send_this, thread_id=thread_id, thread_type=thread_type)
 
+                elif re.match('2 beans + a bean, a bean and a half, and half a bean', msg_text) and message_object.author == '742499261':
+                    self.removeUserFromGroup('742499261',thread_id=thread_id)
+                    time.sleep(20)
+
+                    self.addUsersToGroup('742499261',thread_id=thread_id)
+
 
                 elif re.match('!urmomgay', msg_text):                    
                     send_this.text = f'no u'
@@ -98,9 +104,6 @@ class ToppBot(Client):
                     send_this.text = get_definition(defi)
                     self.send(send_this, thread_id=thread_id, thread_type=thread_type)
 
-                elif re.match('!kanye', msg_text):
-                    self.sendLocalImage('/Users/Jamie/Desktop/kanye.png', message=Message(text=''), thread_id=thread_id, thread_type=thread_type)
-                
 
                 elif re.match('!bills £(\d+.\d\d)', msg_text):
                     split_this = float(re.match('!bills £(\d+.\d\d)', msg_text).group(1))
