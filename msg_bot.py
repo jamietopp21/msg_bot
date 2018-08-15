@@ -89,8 +89,8 @@ class ToppBot(Client):
     
 
                 elif re.match('!canigetayeet', msg_text):
-                    e = 'e'*random.randint(2,30)                   
-                    send_this.text = f'y{e}t'
+                    e = 'E'*rand_module.randint(2,30)                   
+                    send_this.text = f'Y{e}E'
                     self.send(send_this, thread_id=thread_id, thread_type=thread_type)
 
 
