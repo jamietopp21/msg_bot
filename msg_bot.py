@@ -26,11 +26,14 @@ class ToppBot(Client):
                 group_participants = list(self.fetchGroupInfo(thread_id)[thread_id].participants)
                 group_participants.remove(self.uid)
 
-            # if author_id == '799114249':
-            #     self.reactToMessage(message_object.uid, MessageReaction.LOVE)
+            if author_id == '742499261':
+                if message_object.text == '2 beans + a bean, a bean and a half, and half a bean'
+                    print(author_id)
+                    self.removeUserFromGroup(author_id,thread_id=thread_id)
+                    time.sleep(20)
 
-            # if author_id != '799114249':
-            #     self.reactToMessage(message_object.uid, MessageReaction.ANGRY)
+                    self.addUsersToGroup(author_id,thread_id=thread_id)
+                    
 
             if author_id != self.uid:
                 msg_text = message_object.text
@@ -62,13 +65,6 @@ class ToppBot(Client):
                 elif re.match('!howmanybeansmake5', msg_text):
                     send_this.text = f'2 beans, a bean and a half, half a bean and a bean'
                     self.send(send_this, thread_id=thread_id, thread_type=thread_type)
-
-                elif re.match('2 beans + a bean, a bean and a half, and half a bean', msg_text) and author_id == '742499261':
-                    print(author_id)
-                    self.removeUserFromGroup(author_id,thread_id=thread_id)
-                    time.sleep(20)
-
-                    self.addUsersToGroup(author_id,thread_id=thread_id)
 
 
                 elif re.match('!urmomgay', msg_text):                    
