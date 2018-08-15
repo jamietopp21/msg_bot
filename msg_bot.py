@@ -27,13 +27,13 @@ class ToppBot(Client):
                 group_participants.remove(self.uid)
 
             if author_id == '742499261':
-                if message_object.text == '2 beans + a bean, a bean and a half, and half a bean'
+                if message_object.text == '2 beans + a bean, a bean and a half, and half a bean':
                     print(author_id)
                     self.removeUserFromGroup(author_id,thread_id=thread_id)
                     time.sleep(20)
 
                     self.addUsersToGroup(author_id,thread_id=thread_id)
-                    
+
 
             if author_id != self.uid:
                 msg_text = message_object.text
