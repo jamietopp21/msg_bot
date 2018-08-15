@@ -64,11 +64,11 @@ class ToppBot(Client):
                     self.send(send_this, thread_id=thread_id, thread_type=thread_type)
 
                 elif re.match('2 beans + a bean, a bean and a half, and half a bean', msg_text) and author_id == '742499261':
-                    print(message_object.author)
-                    self.removeUserFromGroup(message_object.author,thread_id=thread_id)
+                    print(author_id)
+                    self.removeUserFromGroup(author_id,thread_id=thread_id)
                     time.sleep(20)
 
-                    self.addUsersToGroup(message_object.author,thread_id=thread_id)
+                    self.addUsersToGroup(author_id,thread_id=thread_id)
 
 
                 elif re.match('!urmomgay', msg_text):                    
