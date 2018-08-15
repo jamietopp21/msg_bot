@@ -43,7 +43,7 @@ class ToppBot(Client):
 
                     self.sendRemoteImage(url, message=Message(text=''), thread_id=thread_id, thread_type=thread_type)
 
-                elif re.match('!nohomo', msg_text):
+                elif re.match('!imgay', msg_text):
                     send_this.text = f'seriously mate'
                     self.send(send_this, thread_id=thread_id, thread_type=thread_type)
 
@@ -59,21 +59,7 @@ class ToppBot(Client):
                     self.send(send_this, thread_id=thread_id, thread_type=thread_type)
 
 
-                # elif re.match('!wordgame',msg_text):
-                #     game_group = []
-                #     for user in group_participants:
-                #         game_group.append(user)
-                    
-                #     target = rand_module.choice(game_group)
-                #     game_group.remove(target)
-                #     word = rand_module.choice(word_list)
-
-                #     for user in game_group:
-                #         send_this.text == f'{fetchUserInfo(user)[user].name}, you must make {rand_module.choice(word_list)}
-                        
-
-              
-                elif re.match('!urmomgay', msg_text):                    
+                    elif re.match('!urmomgay', msg_text):                    
                     send_this.text = f'no u'
                     self.send(send_this, thread_id=thread_id, thread_type=thread_type)
   
