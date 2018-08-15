@@ -53,7 +53,7 @@ class ToppBot(Client):
                     send_this.text = f'I\'m working!'
                     self.send(send_this, thread_id=thread_id, thread_type=thread_type)
 
-                elif re.match('!choosefood'):
+                elif re.match('!choosefood', msg_text):
                     foods = [
                         'Nandos',
                         'McDonalds',
