@@ -82,6 +82,37 @@ class ToppBot(Client):
                     self.send(send_this, thread_id=thread_id, thread_type=thread_type)
 
 
+                elif re.match('!trivia', msg_text):
+
+                    r = requests.get('https://opentdb.com/api.php?amount=1').json()
+
+                    question = r['results'][0]['question']
+                    correct = r['results'][0]['correct_answer']
+                    choices = r['results'][0]['incorrect_answers']
+
+                    choices.append(correct)
+
+                    rand_module.shuffle(choices)
+
+                    correct_index = choices.index(correct) + 1
+
+
+                    send_this.text = question
+                    self.send(send_this, thread_id=thread_id, thread_type=thread_type)
+                    
+                    letters = ['a','b','c','d']
+
+                    for x in range(0,len(choices)):
+                        send_this.text = f'{letters[x]}) {choice}'
+                        self.send(send_this, thread_id=thread_id, thread_type=thread_type)
+
+
+                    time.sleep(10)
+
+                    send_this.text = f'The answer was: {correct}!'
+                    self.send(send_this, thread_id=thread_id, thread_type=thread_type)
+
+                    
 
                 elif re.match('!urmomgay', msg_text):                    
                     send_this.text = f'no u'
