@@ -237,6 +237,9 @@ class ToppBot(Client):
                 elif re.match('!sendnudes', msg_text):
                     self.sendRemoteImage('https://thumbs.dreamstime.com/b/funny-nudes-figures-18698635.jpg', message=Message(text=''), thread_id=thread_id, thread_type=thread_type)
                 
+                elif re.match('!flackhole', msg_text):
+                    self.sendRemoteImage('https://www.hellomagazine.com/imagenes/fashion/news/2017112958406/caroline-flack-wears-party-dress-kira-kira/0-283-638/caroline-flack-sparkly-kira-kira-picture-t.jpg', message=Message(text=''), thread_id=thread_id, thread_type=thread_type)
+
 
                 elif re.match('!important (.*)',msg_text):
                     #if a json file with the name thread_id_important doesn't exist, then create one
