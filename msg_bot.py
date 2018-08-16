@@ -97,13 +97,13 @@ class ToppBot(Client):
                     correct_index = choices.index(correct) + 1
 
 
-                    send_this.text = question
+                    send_this.text = question.replace('&quot;', '"')
                     self.send(send_this, thread_id=thread_id, thread_type=thread_type)
                     
                     letters = ['a','b','c','d']
 
                     for x in range(0,len(choices)):
-                        send_this.text = f'{letters[x]}) {choice}'
+                        send_this.text = f'{letters[x]}) {choices[x]}'
                         self.send(send_this, thread_id=thread_id, thread_type=thread_type)
 
 
